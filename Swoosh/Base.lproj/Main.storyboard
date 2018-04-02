@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +52,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W7H-t6-cFl" kind="show" id="qCC-pG-OpY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdx-cn-zzk">
                                 <rect key="frame" x="30" y="254" width="260" height="60.5"/>
@@ -166,27 +170,41 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmh-gq-o7j">
+                                <rect key="frame" x="0.0" y="30" width="44" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="fed-Nt-QLD"/>
+                                    <constraint firstAttribute="height" constant="33" id="x5F-0y-Zuh"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="pnM-9J-2Bc" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="UHR-ev-Z4V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C2b-rA-rY3" firstAttribute="bottom" secondItem="jJu-ON-DOp" secondAttribute="bottom" id="2z2-aV-5bc"/>
                             <constraint firstItem="C2b-rA-rY3" firstAttribute="bottom" secondItem="TBL-2s-ekD" secondAttribute="bottom" constant="35" id="47t-f5-Cue"/>
                             <constraint firstItem="C2b-rA-rY3" firstAttribute="trailing" secondItem="jJu-ON-DOp" secondAttribute="trailing" id="4Rw-fd-TkP"/>
-                            <constraint firstItem="TBL-2s-ekD" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" id="Cl1-f1-NdI"/>
+                            <constraint firstItem="TBL-2s-ekD" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" constant="40" id="Cl1-f1-NdI"/>
+                            <constraint firstItem="Fmh-gq-o7j" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" id="Qls-dx-e3K"/>
                             <constraint firstItem="r4O-e2-n0z" firstAttribute="top" secondItem="Cuw-AC-C2g" secondAttribute="bottom" constant="50" id="Y3N-A3-KWg"/>
                             <constraint firstItem="jJu-ON-DOp" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" id="cMd-OD-VQy"/>
                             <constraint firstItem="jJu-ON-DOp" firstAttribute="top" secondItem="Dwx-zl-i9T" secondAttribute="top" id="fGh-0q-cJK"/>
-                            <constraint firstItem="C2b-rA-rY3" firstAttribute="trailing" secondItem="TBL-2s-ekD" secondAttribute="trailing" id="gaR-Ue-HNZ"/>
+                            <constraint firstItem="C2b-rA-rY3" firstAttribute="trailing" secondItem="TBL-2s-ekD" secondAttribute="trailing" constant="40" id="gaR-Ue-HNZ"/>
                             <constraint firstItem="r4O-e2-n0z" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" id="jw2-pL-ssk"/>
                             <constraint firstItem="C2b-rA-rY3" firstAttribute="trailing" secondItem="Cuw-AC-C2g" secondAttribute="trailing" id="oXG-S7-lVi"/>
                             <constraint firstItem="Cuw-AC-C2g" firstAttribute="top" secondItem="C2b-rA-rY3" secondAttribute="top" constant="20" id="q62-oh-9jL"/>
                             <constraint firstItem="Cuw-AC-C2g" firstAttribute="leading" secondItem="C2b-rA-rY3" secondAttribute="leading" id="tPj-rf-41K"/>
+                            <constraint firstItem="Fmh-gq-o7j" firstAttribute="top" secondItem="Dwx-zl-i9T" secondAttribute="topMargin" constant="10" id="xfB-PI-cbP"/>
                             <constraint firstItem="C2b-rA-rY3" firstAttribute="trailing" secondItem="r4O-e2-n0z" secondAttribute="trailing" id="z1z-nf-3f8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C2b-rA-rY3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COW-MM-gXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pnM-9J-2Bc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1149.375" y="41.197183098591552"/>
         </scene>
@@ -281,6 +299,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>

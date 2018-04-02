@@ -17,20 +17,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let w = view.frame.size.width
+//        let w = view.frame.size.width
 //        let h = view.frame.size.height
-
-        let wSwoosh = swoosh.frame.size.width
-        let hSwoosh = swoosh.frame.size.height
-        
-        swoosh.frame = CGRect(x: w/2 - wSwoosh/2, y: 50, width: wSwoosh, height: hSwoosh)
-        
-        bgImg.frame = view.frame
+//
+//        let wSwoosh = swoosh.frame.size.width
+//        let hSwoosh = swoosh.frame.size.height
+//
+//        swoosh.frame = CGRect(x: w/2 - wSwoosh/2, y: 50, width: wSwoosh, height: hSwoosh)
+//
+//        bgImg.frame = view.frame
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
+        
     }
 
 
