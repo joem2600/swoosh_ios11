@@ -10,6 +10,11 @@ import UIKit
 
 class LeagueVC: UIViewController {
 
+    @IBAction func onNextClicked(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
