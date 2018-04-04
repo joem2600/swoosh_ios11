@@ -9,16 +9,39 @@
 import UIKit
 
 class LeagueVC: UIViewController {
+    
+    // Optional Player ...code will not run unless there is an actual player
+    var player: Player!
 
+    @IBOutlet weak var nextBtn: BorderButton!
+    
+    @IBAction func onMensPressed(_ sender: UIButton) {
+        selectLeague(leagueType: "mens")
+    }
+    
+    @IBAction func onWomensPressed(_ sender: UIButton) {
+        selectLeague(leagueType: "womens")
+    }
+    
+    @IBAction func onCoedPressed(_ sender: UIButton) {
+        selectLeague(leagueType: "coed")
+    }
+    
     @IBAction func onNextClicked(_ sender: UIButton) {
         
         performSegue(withIdentifier: "skillVCSegue", sender: self)
     }
     
+    func selectLeague(leagueType: String) {
+        player.desiredLeague = leagueType
+        nextBtn.isEnabled = true
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        player = Player()
     }
 
     override func didReceiveMemoryWarning() {
